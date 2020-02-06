@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">CollegeLoanCalc</string>
+    <string name="app_name">LoanCalculator</string>
+    <string name="initAmount">0.00</string>
 </resources>
