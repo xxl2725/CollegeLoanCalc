@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">LoanCalculator</string>
     <string name="initAmount">0.00</string>
+    <string name="year">Year</string>
+    <string name="_5">5</string>
+    <string name="_10">10</string>
 </resources>

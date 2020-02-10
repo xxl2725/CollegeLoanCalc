@@ -6,6 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/twentyFiveYearsEMI"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/initAmount"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toStartOf="@+id/twentyFiveYearsTotal"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/twentyFiveYearsTag"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
+    <EditText
+        android:id="@+id/twentyFiveYearsTotal"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/initAmount"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/twentyFiveYearsEMI"
+        app:layout_constraintTop_toTopOf="@+id/guideline7" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
@@ -83,18 +117,11 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.15" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.33" />
-
     <TextView
         android:id="@+id/YearTag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Year"
+        android:text="@string/year"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
@@ -103,10 +130,10 @@
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <TextView
-        android:id="@+id/fiveYears"
+        android:id="@+id/fiveYearsTag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="5"
+        android:text="@string/_5"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
@@ -115,10 +142,10 @@
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
     <TextView
-        android:id="@+id/tenYears"
+        android:id="@+id/tenYearsTag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="10"
+        android:text="@string/_10"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
@@ -148,7 +175,6 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
-        app:layout_constraintEnd_toStartOf="@+id/guideline12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -174,33 +200,33 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toStartOf="@+id/guideline12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <EditText
-        android:id="@+id/LoanAmountText"
+        android:id="@+id/loanAmountText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/initAmount"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintStart_toEndOf="@+id/LoanAmountTag"
         app:layout_constraintTop_toTopOf="parent" />
 
     <SeekBar
         android:id="@+id/seekBar"
         android:layout_width="195dp"
         android:layout_height="14dp"
-        android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:max="100"
         android:progress="5"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toStartOf="@+id/interestRateText"
-        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:layout_constraintStart_toEndOf="@+id/InterestRateTag"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <TextView
@@ -228,14 +254,14 @@
         android:text="@string/initAmount"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintEnd_toStartOf="@+id/editText5"
+        app:layout_constraintEnd_toStartOf="@+id/fiveYearsTotal"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toTopOf="@+id/guideline3"
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/fiveYearsTotal"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
@@ -253,7 +279,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/tenYearEMI"
         android:layout_width="0dp"
         android:layout_height="41dp"
         android:layout_marginStart="8dp"
@@ -265,14 +291,14 @@
         android:text="@string/initAmount"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
-        app:layout_constraintEnd_toStartOf="@+id/editText14"
+        app:layout_constraintEnd_toStartOf="@+id/tenYearsTotal"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tenYears"
+        app:layout_constraintStart_toEndOf="@+id/tenYearsTag"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
     <EditText
-        android:id="@+id/editText14"
+        android:id="@+id/tenYearsTotal"
         android:layout_width="0dp"
         android:layout_height="41dp"
         android:layout_marginStart="4dp"
@@ -285,11 +311,11 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editText6"
+        app:layout_constraintStart_toEndOf="@+id/tenYearEMI"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />
 
     <TextView
-        android:id="@+id/fivetenYears"
+        android:id="@+id/fifteenYearsTag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="15"
@@ -301,7 +327,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
     <TextView
-        android:id="@+id/twentiyYears"
+        android:id="@+id/twentyYearsTag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="20"
@@ -313,7 +339,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
     <TextView
-        android:id="@+id/twitenfiveYears"
+        android:id="@+id/twentyFiveYearsTag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="25"
@@ -325,7 +351,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/thirtyYearsTag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="30"
@@ -337,7 +363,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline8" />
 
     <EditText
-        android:id="@+id/editText15"
+        android:id="@+id/fifteenYearsEMI"
         android:layout_width="0dp"
         android:layout_height="39dp"
         android:layout_marginStart="8dp"
@@ -347,14 +373,14 @@
         android:text="@string/initAmount"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
-        app:layout_constraintEnd_toStartOf="@+id/editText16"
+        app:layout_constraintEnd_toStartOf="@+id/fifteenYearsTotal"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/fivetenYears"
+        app:layout_constraintStart_toEndOf="@+id/fifteenYearsTag"
         app:layout_constraintStart_toStartOf="@+id/guideline11"
         app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
     <EditText
-        android:id="@+id/editText16"
+        android:id="@+id/fifteenYearsTotal"
         android:layout_width="0dp"
         android:layout_height="39dp"
         android:layout_marginStart="4dp"
@@ -366,7 +392,75 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editText15"
+        app:layout_constraintStart_toEndOf="@+id/fifteenYearsEMI"
         app:layout_constraintTop_toTopOf="@+id/guideline5" />
+
+    <EditText
+        android:id="@+id/twentyYearsEMI"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/initAmount"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toStartOf="@+id/twentyYearsTotal"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/twentyYearsTag"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+    <EditText
+        android:id="@+id/twentyYearsTotal"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/initAmount"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/twentyYearsEMI"
+        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+    <EditText
+        android:id="@+id/thirtyYearsEMI"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/initAmount"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toStartOf="@+id/thirtyYearsTotal"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/thirtyYearsTag"
+        app:layout_constraintStart_toStartOf="@+id/guideline11"
+        app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+    <EditText
+        android:id="@+id/thirtyYearsTotal"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/initAmount"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/thirtyYearsEMI"
+        app:layout_constraintTop_toTopOf="@+id/guideline8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
